@@ -40,17 +40,16 @@
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="App_Packages\LibLog.4.2\LibLog.cs" />
-    <Compile Include="ICheckpointRepository.cs" />
     <Compile Include="InterlockedBoolean.cs" />
     <Compile Include="InterlockedBooleanExtensions.cs" />
     <Compile Include="IProjectionHandlerBuilder.cs" />
     <Compile Include="IProjectionHandlerResolver.cs" />
-    <Compile Include="ProjectionDispatcher.cs" />
     <Compile Include="ProjectionEvent.cs" />
     <Compile Include="ProjectionHandlerBuilderExtensions.cs" />
     <Compile Include="ProjectionHandlerModule.cs" />
     <Compile Include="ProjectionHandlerRegistration.cs" />
     <Compile Include="ProjectionHandlerResolver.cs" />
+    <Compile Include="ProjectionHandlerResolverExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -47,11 +47,7 @@
             var timeStamp = DateTimeOffset.UtcNow;
             var headers = new ReadOnlyDictionary<string, object>(new Dictionary<string, object>());
 
-            using (var dispatcher = new TestProjectionDispatcher(handlerResolver, new InMemoryCheckpointRepository()))
-            {
-                await dispatcher.Start();
-                await dispatcher.DoDispatch(streamId, eventId, version, timeStamp, "checkpoint", headers, new TestEvent());
-            }
+            await handlerResolver.Dispatch(streamId, eventId, version, timeStamp, headers, new TestEvent());
 
             projectedEvents.Count.Should().Be(1);
 
